@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers</title>
+  </head>
+  <body>
+    <input type="number" id="number1" />
+    <input type="number" id="number2" />
+    <button id="numberClick">Click</button>
+
+    <script>
+      const numbers1 = document.getElementById("number1");
+      const numbers2 = document.getElementById("number2");
+      const numbersBtn = document.getElementById("numberClick");
+
+      numbersBtn.addEventListener("click", function () {
+        const sith = document.createElement("p");
+        document.body.appendChild(sith);
+
+        if (
+          (numbers1.valueAsNumber > numbers2.valueAsNumber) &
+          (numbers1.valueAsNumber >= 1) &
+          (numbers2.valueAsNumber >= 1)
+        ) {
+          for (
+            let i = numbers2.valueAsNumber;
+            i <= numbers1.valueAsNumber;
+            i++
+          ) {
+            console.log(i);
+            sith.textContent += i + ",";
+          }
+        } else {
+          alert("tev ir kļūda");
+        }
+      });
+    </script>
+  </body>
+</html>
